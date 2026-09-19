@@ -1,0 +1,30 @@
+{
+  "name": "release-radar",
+  "version": "1.0.0",
+  "description": "Lightweight cross-browser extension to track upcoming anime & episode release countdowns in real time.",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/your-org/release-radar#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/release-radar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/release-radar/issues"
+  },
+  "keywords": [
+    "manifest-v3",
+    "webextension",
+    "anime-tracker",
+    "countdown-timer",
+    "firefox-addon",
+    "chrome-extension"
+  ],
+  "scripts": {
+    "web-ext:run": "web-ext run",
+    "web-ext:lint": "web-ext lint"
+  },
+  "devDependencies": {
+    "web-ext": "^8.0.0"
+  }
+}
