@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Release Radar</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Release Radar</span>
+    </div>
+    <button id="refresh-all-btn" class="icon-btn" title="Refresh all">⟳</button>
+  </header>
+
+  <form id="add-form" class="add-row">
+    <input
+      id="url-input"
+      type="url"
+      placeholder="Paste a URL to track…"
+      autocomplete="off"
+      required
+    />
+    <button type="submit" class="primary-btn">Add</button>
+  </form>
+
+  <button id="track-tab-btn" class="secondary-btn full-width">
+    ➕ Track current tab
+  </button>
+
+  <div class="search-row">
+    <input
+      id="search-input"
+      type="search"
+      placeholder="Filter by title or domain…"
+      autocomplete="off"
+    />
+  </div>
+
+  <ul id="item-list" class="item-list"></ul>
+
+  <div id="empty-state" class="empty-state" hidden>
+    <p>Nothing tracked yet.</p>
+    <p class="empty-sub">Paste a URL above, or open a page and hit "Track current tab".</p>
+  </div>
+
+  <div id="no-match-state" class="empty-state" hidden>
+    <p>No matches.</p>
+    <p class="empty-sub">Try a different keyword or clear the filter.</p>
+  </div>
+
+  <footer class="app-footer">
+    <span id="status-text" class="status-text"></span>
+  </footer>
+
+  <script src="../lib/browser-polyfill-shim.js"></script>
+  <script src="../lib/time.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
